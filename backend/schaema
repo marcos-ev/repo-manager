@@ -1,0 +1,14 @@
+CREATE TABLE repos (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    owner VARCHAR(255),
+    stars INT
+);
+
+
+SELECT * FROM repos;
+
+
+-- test 
+-- INSERT INTO repos (id, name, owner, stars) VALUES (1, 'Nome do Repositório', 'Dono do Repositório', 42);
+

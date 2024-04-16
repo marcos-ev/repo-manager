@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 import { importRepos } from '../controllers/repocontroller';
 
 const router = express.Router();

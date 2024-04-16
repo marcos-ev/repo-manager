@@ -1,11 +1,10 @@
-// src/pages/Home.tsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { unparse } from 'papaparse';
 import SearchBar from '../components/SearchBar';
 import RepoList from '../components/RepoList';
 import { Link } from 'react-router-dom';
-
+import './Home.css'; // Importe o arquivo CSS do Home
 
 interface Repo {
   id: number;
@@ -47,9 +46,11 @@ const Home: React.FC = () => {
     <div>
       <SearchBar onSearch={handleSearch} />
       {repos.length > 0 && <RepoList repos={repos} onExport={handleExport} />}
-      <Link to="/import">
-        <button>Importação</button>
-      </Link>
+      <div className="import-button-container"> {/* Centralize o botão de importação */}
+        <Link to="/import">
+          <button>Importação</button>
+        </Link>
+      </div>
     </div>
   );
 };
