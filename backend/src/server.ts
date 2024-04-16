@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
+// Usar as rotas definidas no arquivo repoRoutes.ts
 app.use('/api', repoRoutes);
 
 app.listen(PORT, () => {

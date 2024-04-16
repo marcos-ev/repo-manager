@@ -1,5 +1,8 @@
+// SearchBar.tsx
 import React, { useState } from 'react';
-import './SearchBar.css';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 interface SearchBarProps {
   onSearch: (username: string) => void;
@@ -13,15 +16,16 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   };
 
   return (
-    <div className="search-bar-container">
-      <input
-        type="text"
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',  marginTop: '1vh', padding: '2vh' }}>
+      <TextField
+        variant="outlined"
+        size="small"
         placeholder="Enter GitHub username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <button onClick={handleSearch}>Pesquisar</button>
-    </div>
+      <Button variant="contained" onClick={handleSearch} style={{ marginLeft: '10px' }}>Pesquisar</Button>
+    </Box>
   );
 };
 

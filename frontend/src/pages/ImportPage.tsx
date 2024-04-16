@@ -1,9 +1,9 @@
-// src/pages/ImportPage.tsx
 import React, { useState } from 'react';
-import axios from 'axios'; // Adicionado para fazer a chamada HTTP ao backend
+import axios from 'axios'; 
 import Papa from 'papaparse';
-import ImportButton from '../components/ImportButton';
 import RepoList from '../components/RepoList';
+import Box from '@mui/material/Box';
+import logo from '../assets/brx.png'; 
 
 interface Repo {
   id: number;
@@ -12,7 +12,6 @@ interface Repo {
   stars: number;
 }
 
-// Adicione a URL base do backend como uma constante ou variável de ambiente
 const BACKEND_URL = 'http://localhost:3001/api';
 
 const ImportPage: React.FC = () => {
@@ -33,7 +32,6 @@ const ImportPage: React.FC = () => {
             stars: parseInt(item.stars, 10),
           }));
 
-          // Após processar o CSV, envie os dados para o backend
           axios.post(`${BACKEND_URL}/repos/import`, data)
             .then((response) => {
               console.log('Dados importados para o backend com sucesso:', response.data);
@@ -42,7 +40,6 @@ const ImportPage: React.FC = () => {
               console.error('Erro ao importar dados para o backend:', error);
             });
 
-          // Atualize o estado com os dados importados do CSV
           setRepos(data);
         },
       });
@@ -50,10 +47,17 @@ const ImportPage: React.FC = () => {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleImport} />
-      {repos.length > 0 && <RepoList repos={repos} onExport={() => {}} />}
-    </div>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', marginTop: '1vh' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+        <img  src={logo} className="logo" />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+        <input type="file" onChange={handleImport} />
+      </div>
+      <div>
+        {repos.length > 0 && <RepoList repos={repos} />}
+      </div>
+    </Box>
   );
 };
 

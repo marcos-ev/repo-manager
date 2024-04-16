@@ -1,5 +1,8 @@
+// RepoList.tsx
 import React, { useState } from 'react';
 import './RepoList.css';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
 
 interface Repo {
   id: number;
@@ -10,10 +13,9 @@ interface Repo {
 
 interface RepoListProps {
   repos: Repo[];
-  onExport: () => void;
 }
 
-const RepoList: React.FC<RepoListProps> = ({ repos, onExport }) => {
+const RepoList: React.FC<RepoListProps> = ({ repos }) => {
   const [filter, setFilter] = useState('');
 
   const filteredRepos = filter
@@ -21,40 +23,39 @@ const RepoList: React.FC<RepoListProps> = ({ repos, onExport }) => {
     : repos;
 
   return (
-    <div>
-      <div className="search-bar-container">
-        <input
+    <Box>
+      <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+        <TextField
           className="filter-input"
+          variant="outlined"
+          size="small"
           type="text"
-          placeholder="Filter repositories by name"
+          placeholder="Filter by name"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
-      </div>
-      <div className="export-button-container"> {/* Novo container para o botão de exportação */}
-        <button className="export-button" onClick={onExport}>Export to CSV</button>
-      </div>
+      </Box>
       <div style={{ overflowX: 'auto' }}>
         <table style={{ margin: 'auto', maxWidth: '80%' }}>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Owner</th>
-              <th>Stars</th>
+              <th className="table-header">Name</th>
+              <th className="table-header">Owner</th>
+              <th className="table-header">Stars</th>
             </tr>
           </thead>
           <tbody>
             {filteredRepos.map((repo) => (
               <tr key={repo.id}>
-                <td>{repo.name}</td>
-                <td>{repo.owner}</td>
-                <td>{repo.stars}</td>
+                <td className="table-cell">{repo.name}</td>
+                <td className="table-cell">{repo.owner}</td>
+                <td className="table-cell">{repo.stars}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-    </div>
+    </Box>
   );
 };
 

@@ -1,5 +1,15 @@
-.export-button-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+/* RepoList.css */
+.table-header {
+  text-align: center;
+  padding-right: 3vh;
+  padding-top: 1vh;
+
+
+}
+
+.table-cell {
+  padding: 0.3vh;
+  text-align: center;
+  padding-right: 3vh;
+
 }

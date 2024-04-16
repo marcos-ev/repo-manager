@@ -1,6 +1,6 @@
 import amqp from 'amqplib';
 
-const RABBITMQ_URL = 'amqp://localhost'; 
+const RABBITMQ_URL = 'amqp://localhost'; // Ou a URL para o seu RabbitMQ Docker container
 
 async function sendToQueue(data: any) {
   const connection = await amqp.connect(RABBITMQ_URL);

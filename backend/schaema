@@ -8,7 +8,7 @@ CREATE TABLE repos (
 
 SELECT * FROM repos;
 
+TRUNCATE TABLE repos;
 
--- test 
--- INSERT INTO repos (id, name, owner, stars) VALUES (1, 'Nome do Repositório', 'Dono do Repositório', 42);
 
+INSERT INTO repos (id, name, owner, stars) VALUES (1, 'Nome do Repositório', 'Dono do Repositório', 42);

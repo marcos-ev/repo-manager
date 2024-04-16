@@ -1,10 +1,14 @@
+// src/pages/Home.tsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { unparse } from 'papaparse';
 import SearchBar from '../components/SearchBar';
 import RepoList from '../components/RepoList';
 import { Link } from 'react-router-dom';
-import './Home.css'; // Importe o arquivo CSS do Home
+import Button from '@mui/material/Button';
+import './Home.css';
+import logo from '../assets/brx.png'; 
+
 
 interface Repo {
   id: number;
@@ -15,6 +19,7 @@ interface Repo {
 
 const Home: React.FC = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
+  const [showExportButton, setShowExportButton] = useState(false);
 
   const handleSearch = async (username: string) => {
     try {
@@ -25,7 +30,12 @@ const Home: React.FC = () => {
         owner: repo.owner.login,
         stars: repo.stargazers_count
       }));
-      setRepos(repos);
+      if (repos.length === 0) {
+        console.log("Nenhum repositório encontrado.");
+      } else {
+        setRepos(repos);
+        setShowExportButton(true); // Mostrar o botão de exportar quando os repositórios forem carregados
+      }
     } catch (error) {
       console.error('Failed to fetch repositories', error);
     }
@@ -44,12 +54,25 @@ const Home: React.FC = () => {
 
   return (
     <div>
+
+    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1vh' }} className="logo-container">
+      <a href="https://www.brx.com.br/">
+        <img src={logo} className="logo" />
+      </a>
+    </div>
+
+
       <SearchBar onSearch={handleSearch} />
-      {repos.length > 0 && <RepoList repos={repos} onExport={handleExport} />}
-      <div className="import-button-container"> {/* Centralize o botão de importação */}
+      {repos.length > 0 && <RepoList repos={repos} />}
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1vh', marginBottom: '3vh' }}>
         <Link to="/import">
-          <button>Importação</button>
+          <Button variant="contained">Importação</Button>
         </Link>
+        {showExportButton && (
+          <Button variant="contained" onClick={handleExport} style={{ marginLeft: '10px' }}>
+            Exportar para CSV
+          </Button>
+        )}
       </div>
     </div>
   );
