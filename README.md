@@ -67,7 +67,7 @@ O sistema é dividido em microserviços gerenciados via Docker Compose:
 
 ## Observações
 
-Projeto criado para a empresa BRX, visualização pública por tempo limitado, tive uma certa facilidade com a lógica principal e conexão com API, porém por questões de pouca utilização acabei tendo um pouco de dificuldade em conectar aplicação com o rabbitMQ. De inicio tentei colocar de forma equivocada no conteiner o backend completo de uma vez só pelo Docler...ocasionando em alguns erros, porém após uma breve análise consegui adicionar ao docker o serviço de mensageria e organizar melhor a aplicação. Ao importar o CSV os dados são salvos como backup no bando no MariaDB. Foi utilizado DBeaver, multiplataforma SQL para acessar o banco. Foi utilizado MUI para estilização da aplicação REACT e Node no backend.
+Projeto criado para a empresa BRX, visualização pública por tempo limitado, tive uma certa facilidade com a lógica principal e conexão com API, porém por questões de pouca utilização acabei tendo um pouco de dificuldade em conectar aplicação com o rabbitMQ. De inicio tentei colocar de forma equivocada no conteiner o backend completo de uma vez só pelo Docler...ocasionando em alguns erros, porém após uma breve análise consegui adicionar ao docker o serviço de mensageria e organizar melhor a aplicação. Ao importar o CSV os dados são salvos como backup no bando no MariaDB. Foi utilizado DBeaver, multiplataforma SQL para acessar o banco. Foi utilizado MUI para estilização da aplicação REACT e Node no backend. Considerando a obrigatoriedade de Docker e mensageria o projeto foi de dificuldade intermediária pois a lógica principal era simples, sem esses dois elementos seria de dificuldade fácil.
 
 ## Melhorias
 
