@@ -63,10 +63,14 @@ O sistema é dividido em microserviços gerenciados via Docker Compose:
 - `rabbitmq`: O serviço de mensagens que gerencia a fila de processamento em segundo plano.
 - `mariadb`: O banco de dados utilizado para armazenar dados de repositórios.
 
-## Licença
+## Observações
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo `LICENSE` para mais detalhes.
+Projeto criado para a empresa BRX, visualização pública por tempo limitado, tive uma certa facilidade com a lógica principal e conexão com API, porém por questões de pouca utilização acabei tendo um pouco de dificuldade em conectar aplicação com o rabbitMQ. De inicio tentei colocar de forma equivocada no conteiner o backend completo de uma vez só pelo Docler...ocasionando em alguns erros, porém após uma breve análise consegui adicionar ao docker o serviço de mensageria e organizar melhor a aplicação. Ao importar o CSV os dados são salvos como backup no bando no MariaDB. Foi utilizado DBeaver, multiplataforma SQL para acessar o banco. Foi utilizado MUI para estilização da aplicação REACT e Node no backend.
+
+## Melhorias
+
+A principio poderia deixar o layout mais responsivo, porém focar em detalhes estéticos e de usabilidade multiplataforma não era meu objetivo primário nesse momento.
 
 ## Contato
 
-Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato.
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato. Marcosev@gmail.com 
