@@ -2,6 +2,8 @@
 
 O GitHub Repo Manager é uma plataforma web que permite aos usuários pesquisar e gerenciar repositórios do GitHub de forma eficiente. Este projeto foi criado com o intuito de facilitar o gerenciamento de repositórios do GitHub, e inclui funcionalidades como pesquisa, exportação e importação de repositórios, assim como processamento de dados em segundo plano utilizando filas, banco de dados e API REST.
 
+Video apresentação:  https://drive.google.com/file/d/1Zpr48DaEXJIeO6FIDT2ePVjiwk-mql9M/view?usp=sharing
+
 ## Tecnologias Utilizadas
 
 - TypeScript: Uma superset do JavaScript que adiciona tipos estáticos para uma melhor experiência de desenvolvimento.
