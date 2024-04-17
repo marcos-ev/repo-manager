@@ -1,0 +1,22 @@
+# Dependências
+/node_modules
+/package-lock.json
+/yarn.lock
+
+# Arquivo de configuração do ambiente
+.env
+
+# Diretórios de compilação e dist
+/dist
+/build
+
+
+# Arquivos de configuração do editor/IDE
+.vscode/
+
+
+# Arquivos de log
+npm-debug.log
+
+
+
