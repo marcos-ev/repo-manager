@@ -40,11 +40,11 @@ exports.getConnection = void 0;
 // backend/src/config/database.ts
 var mariadb_1 = require("mariadb");
 var pool = (0, mariadb_1.createPool)({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'github_repos',
-    connectionLimit: 5
+    host: process.env.DB_HOST, 
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD, 
+    database: process.env.DB_DATABASE,
+    connectionLimit: connectionLimit
 });
 var getConnection = function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
