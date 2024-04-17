@@ -31,7 +31,7 @@ git clone https://github.com/marcos-ev/repo-manager.git
 
 
 2. Navegue até a pasta raiz do projeto:
-cd repo-manager
+cd github-repo-manager
 
 
 3. Execute npm install para instalar as dependências necessárias.
@@ -42,11 +42,16 @@ cd repo-manager
 docker-compose up --build
 
 ```
-Isso irá iniciar todos os serviços necessários, incluindo o aplicativo backend, frontend, RabbitMQ e MariaDB.
+Isso irá iniciar todos os serviços necessários, incluindo o aplicativo frontend e RabbitMQ 
 
 5. Acesse o frontend via navegador em: [http://localhost:80](http://localhost:80).
 
 6. A interface de gerenciamento do RabbitMQ pode ser acessada em: [http://localhost:15672](http://localhost:15672).
+
+7. Para iniciar o serviço backend com o banco de dados vá para o diretório, abra o terminal e digite
+   ```
+   npm start
+   ```
 
 ### Utilizando o Sistema
 
