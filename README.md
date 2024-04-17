@@ -30,16 +30,18 @@ O GitHub Repo Manager é uma plataforma web que permite aos usuários pesquisar 
 git clone https://github.com/marcos-ev/repo-manager.git
 
 
-2. Navegue até a pasta do projeto:
-cd github-repo-manager
+2. Navegue até a pasta raiz do projeto:
+cd repo-manager
 
 
 3. Execute npm install para instalar as dependências necessárias.
 
 4. Construa e execute os containers com Docker Compose:
 
+```
 docker-compose up --build
 
+```
 Isso irá iniciar todos os serviços necessários, incluindo o aplicativo backend, frontend, RabbitMQ e MariaDB.
 
 5. Acesse o frontend via navegador em: [http://localhost:80](http://localhost:80).
