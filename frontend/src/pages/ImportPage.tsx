@@ -12,7 +12,7 @@ interface Repo {
   stars: number;
 }
 
-const BACKEND_URL = 'http://localhost:3001/api';
+const BACKEND_URL = 'http://host.docker.internal:3002/api';
 
 const ImportPage: React.FC = () => {
   const [repos, setRepos] = useState<Repo[]>([]);

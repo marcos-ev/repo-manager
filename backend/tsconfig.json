@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es6",             // Compila para ECMAScript 6
-    "module": "commonjs",        // Usa o sistema de módulos commonjs, adequado para Node.js
-    "outDir": "./dist",          // Diretório de saída para os arquivos compilados
-    "rootDir": "./src",          // Diretório raiz onde estão os arquivos TypeScript
-    "strict": true,              // Ativa todas as opções estritas de tipo
-    "esModuleInterop": true,     // Permite a interoperabilidade de módulos ES com módulos CommonJS
-    "skipLibCheck": true,        // Pula a checagem de tipos das declarações das bibliotecas
-    "forceConsistentCasingInFileNames": true
+    "module": "CommonJS",
+    "target": "ES2018",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "strict": true
   },
-  "include": ["src/**/*"],       // Inclui todos os arquivos TypeScript na pasta src
-  "exclude": ["node_modules"]    // Exclui a pasta node_modules
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

@@ -4,7 +4,7 @@ import cors from 'cors';
 import repoRoutes from './routes/reporoutes';
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 app.use(cors());
 app.use(bodyParser.json());

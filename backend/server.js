@@ -5,7 +5,7 @@ var body_parser_1 = require("body-parser");
 var cors_1 = require("cors");
 var reporoutes_1 = require("./src/routes/reporoutes");
 var app = (0, express_1.default)();
-var PORT = process.env.PORT || 3001;
+var PORT = process.env.PORT || 3002;
 app.use((0, cors_1.default)());
 app.use(body_parser_1.default.json());
 // Usar as rotas definidas no arquivo repoRoutes.ts

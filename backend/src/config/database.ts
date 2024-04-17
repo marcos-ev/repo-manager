@@ -1,4 +1,3 @@
-// backend/src/config/database.ts
 import { createPool } from 'mariadb';
 
 const pool = createPool({

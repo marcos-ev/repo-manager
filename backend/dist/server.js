@@ -8,7 +8,7 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
 const reporoutes_1 = __importDefault(require("./routes/reporoutes"));
 const app = (0, express_1.default)();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 app.use((0, cors_1.default)());
 app.use(body_parser_1.default.json());
 // Usar as rotas definidas no arquivo repoRoutes.ts
