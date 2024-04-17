@@ -38,8 +38,10 @@ cd repo-manager
 
 4. Construa e execute os containers com Docker Compose:
 
+```
 docker-compose up --build
 
+```
 Isso irá iniciar todos os serviços necessários, incluindo o aplicativo backend, frontend, RabbitMQ e MariaDB.
 
 5. Acesse o frontend via navegador em: [http://localhost:80](http://localhost:80).
