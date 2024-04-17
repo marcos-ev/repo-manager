@@ -30,8 +30,8 @@ O GitHub Repo Manager é uma plataforma web que permite aos usuários pesquisar 
 git clone https://github.com/marcos-ev/repo-manager.git
 
 
-2. Navegue até a pasta do projeto:
-cd github-repo-manager
+2. Navegue até a pasta raiz do projeto:
+cd repo-manager
 
 
 3. Execute npm install para instalar as dependências necessárias.
