@@ -30,23 +30,29 @@ Para executar o GitHub Repo Manager localmente, siga os passos abaixo:
 ### Instruções
 
 1. Clone o repositório:
-git clone [URL_DO_REPOSITORIO]
+git clone https://github.com/marcos-ev/repo-manager.git
 
 
 2. Navegue até a pasta do projeto:
 cd github-repo-manager
 
+3. Npm Install para baixar depedências e bibliotecas necessárias
 
-3. Construa e execute os containers com Docker Compose:
+
+   
+4. Construa e execute os containers com Docker Compose:
 docker-compose up --build
 
 
 Isso irá iniciar todos os serviços necessários, incluindo o aplicativo backend, frontend, RabbitMQ e MariaDB.
 
-4. Acesse o frontend via navegador em:
-http://localhost:3000
+5. Acesse o frontend via navegador em:
+http://localhost:80
 
-5. A interface de gerenciamento do RabbitMQ pode ser acessada em:
+e inicie pelo diretório backend com 
+npm start
+
+7. A interface de gerenciamento do RabbitMQ pode ser acessada em:
 http://localhost:15672
 
 
