@@ -98,11 +98,13 @@ O sistema é dividido em microserviços gerenciados via Docker Compose:
 
 ## Observações
 
-Projeto criado para a empresa BRX, visualização pública por tempo limitado, tive uma certa facilidade com a lógica principal e conexão com API, porém por questões de pouca utilização acabei tendo um pouco de dificuldade em conectar aplicação com o rabbitMQ. De inicio tentei colocar de forma equivocada no conteiner o backend completo de uma vez só pelo Docler...ocasionando em alguns erros, porém após uma breve análise consegui adicionar ao docker o serviço de mensageria e organizar melhor a aplicação. Ao importar o CSV os dados são salvos como backup no bando no MariaDB. Foi utilizado DBeaver, multiplataforma SQL para acessar o banco. Foi utilizado MUI para estilização da aplicação REACT e Node no backend. Considerando a obrigatoriedade de Docker e mensageria o projeto foi de dificuldade intermediária pois a lógica principal era simples, sem esses dois elementos seria de dificuldade fácil.
+Projeto criado para a empresa BRX, visualização pública por tempo limitado, tive uma certa facilidade com a lógica principal e conexão com API, porém por questões de pouca utilização acabei tendo um pouco de dificuldade em conectar aplicação com o rabbitMQ. De inicio tentei colocar de forma equivocada no conteiner o backend completo de uma vez só pelo Docker...ocasionando em alguns erros, porém após uma breve análise consegui adicionar ao docker o serviço de mensageria e o frontend apenas.
+Ao importar o CSV os dados são salvos como backup no bando no MariaDB. Foi utilizado DBeaver, multiplataforma SQL para acessar o banco. Foi utilizado MUI para estilização da aplicação REACT e Node no backend. Considerando a obrigatoriedade de Docker e mensageria o projeto foi de dificuldade intermediária pois a lógica principal era simples, sem esses dois elementos seria de dificuldade fácil.  
 
-## Melhorias
+## Melhorias para o futuro
 
-A principio poderia deixar o layout mais responsivo, porém focar em detalhes estéticos e de usabilidade multiplataforma não era meu objetivo primário nesse momento.
+1. A principio poderia deixar o layout mais responsivo, porém focar em detalhes estéticos e de usabilidade multiplataforma não era meu objetivo primário nesse momento.
+2. Colocar backend com DB no docker também, tentei de diversas formas porém mesmo inseridos com sucesso em outro container eu perdia a conexão com o banco de dados e não conseguia configurar novamente ou achar o endpoint correto. Infelizmente consegui deixar apenas o frontend no Docker para ser inicializado junto com o serviço de mensageria.
 
 ## Contato
 
